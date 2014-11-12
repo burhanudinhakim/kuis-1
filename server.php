@@ -24,7 +24,7 @@
       //buat koneksi
       $db = NewADOConnection('mysql');
       $password = md5($password);
-      $db -> Connect('128.199.182.167','kuis1','rahasia','kuis1'); //cek username dan password dari database
+      $db -> Connect('localhost','root','','user'); //cek username dan password dari database
       $sql = $db -> Execute("SELECT * FROM user where username='$username' AND password='$password'");
       //Cek adanya username dan password di database
       if ($sql->RecordCount() >= 1) //sama dengan mysql_num_rows pada php biasa
