@@ -7,7 +7,7 @@
     header("location:index.php"); 
   }
 ?>
-<form method="post" action="client.php">
+<form method="post" action="client_registrasi_336998.php">
   <table border="0" align="center" cellpadding="5" cellspacing="8">
     <tr>
       <td>Username : </td>
