@@ -10,28 +10,12 @@
 <form method="post" action="client.php">
   <table border="0" align="center" cellpadding="5" cellspacing="8">
     <tr>
-      <td>Id : </td>
-      <td><input name="id" type="text"></td> 
+      <td>Username : </td>
+      <td><input name="username" type="text"></td> 
     </tr>
-	<tr>
-      <td>E-mail : </td>
-      <td><input name="e-mail" type="text"></td> 
-    </tr>
-	<tr>
-      <td>NIM : </td>
-      <td><input name="nim" type="text"></td> 
-    </tr>
-	<tr>
-      <td>Nama : </td>
-      <td><input name="nama" type="text"></td> 
-    </tr>
-	<tr>
-      <td>Jenis Kelamin : </td>
-      <td><input name="jenis_kelamin" type="text"></td> 
-    </tr>
-	<tr>
-      <td>Alamat : </td>
-      <td><input name="alamat" type="text"></td> 
+    <tr>
+      <td>Password : </td>
+      <td><input name="password" type="password"></td>
     </tr>
     <tr>
       <td colspan="2" align="center" height="10">
