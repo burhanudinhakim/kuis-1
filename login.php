@@ -1,5 +1,6 @@
+<html>
 <center><h2><b>Log In</b></h2></center> 
-<?php
+ <?php
   //memulaisession
   session_start();
   //cek adanya session, jika session sudah ada maka diarahkan ke index.php 
@@ -24,3 +25,4 @@
     </tr>
   </table>
 </form>
+</html>
