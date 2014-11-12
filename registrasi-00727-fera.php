@@ -40,11 +40,6 @@
 					</select>
 				</td>
 			</tr>
-			<tr>
-				<td>Nama</td>
-				<td>:</td>
-				<td><input type=password name='nama' size=30></td>
-			</tr>
 			
 			<tr>
 				<td colspan=3 align=center><input type=submit value='  Simpan  '>&nbsp&nbsp<input type=button value='  Batal  ' onclick='window.close();'></td>
