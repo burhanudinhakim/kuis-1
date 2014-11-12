@@ -30,14 +30,14 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-          </ul>
+          </ul> 
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../navbar-static-top/">Anda login sebagai <?php echo $_SESSION['username'];?></a></li>
             <li class="active"><a href="logout.php">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
-    </div>
+    </div> -->
 
     <div class="container">
 
