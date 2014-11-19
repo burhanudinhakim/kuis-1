@@ -5,7 +5,7 @@
   $server->configureWSDL('server','urn:server');
   $server->wsdl->schemaTargetNamespace = 'urn:server';
   //register a function that works on server 
-  $server->register('reg', 
+  $server->register('regestrasi', 
     array(
       'email' => 'xsd:string', 
       'nim'=>'xsd:string',
