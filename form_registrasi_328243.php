@@ -13,13 +13,29 @@ header('location:index.php'); }
 </head>
 
 <body>
-	<div id="container">
-		<div id="header">
-		</div>
-<div>
-        <form class="form-horizontal">
+	
+	 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">E-Learning</a>
+        </div>
+        <div class="navbar-collapse collapse">
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	
+	<div class="container">
+		<div>
+			<form class="form-horizontal" action="client_registrasi_jawaban.php" method="POST">
 <fieldset>
 
+<!-- Form Nmae -->
 <h2>Registrasi Pengguna</h2>
 
 <div class="form-group">
