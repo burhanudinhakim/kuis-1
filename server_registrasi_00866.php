@@ -5,10 +5,13 @@
   $server->configureWSDL('server','urn:server');
   $server->wsdl->schemaTargetNamespace = 'urn:server';
   //register a function that works on server 
-  $server->register('login_ws', 
+  $server->register('registrasi', 
     array(
-      'username' => 'xsd:string', 
-      'password'=>'xsd:string'), //parameters 
+      'email' => 'xsd:string', 
+      'nim'=>'xsd:string'), 
+	  'nama' => 'xsd:string'
+	  'jenis kelamin' => 'xsd:string'
+	  'alamat' => 'xsd:string'//parameters 
       array(
         'return' => 'xsd: string'
       ), //output 
