@@ -23,7 +23,7 @@
     ); 
       
     function registrasi_ws($email, $nama, $nim, $jenis_kelamin, $alamat) {
-      $db = NewADOConnection('mysql');
+      $db = user('mysql');
       $db->Connect('128.199.182.167','kuis1','rahasia','kuis1'); 
       $email = mysql_escape_string($email);
       $nim = mysql_escape_string($nim);
