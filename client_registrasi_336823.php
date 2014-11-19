@@ -8,17 +8,19 @@ require_once('nusoap/lib/nusoap.php');
 $url = 'http://localhost/dev/ws/wsdl/server_registrasi_336823.php?wsdl';
 // $client = new soapclient($url); 
 $client = new nusoap_client($url, 'WSDL');
+$p_post = $_POST;
 
-/*
-$username =  isset($_POST["username"]) ? $_POST["username"] : 'admin' ;
-$password =  isset($_POST["password"]) ? $_POST["password"] :  'admin' ;
-$result = $client->call('login_ws', array('username'=>$username, 'password'=>$password));
-*/
+$result = $client->call('registrasi_ws',
+	array(
+		'email'=>$p_post['email'],
+		'nama'=>$p_post['nama'],
+		'nim'=>$p_post['nim'],
+		'jenis_kelamin'=>$p_post['jenis_kelamin'],
+		));
 
-// echo '<pre>';print_r($client->response);echo '</pre>';
 if($result == "Registrasi Berhasil"){ 
-  //$_SESSION['username'] = $username; 
-  header ("location:index.php");
+  $_SESSION['email'] = $p_post['email']; 
+  header ("location:index_registrasi_berhasil.php");
 } else{
   header ("location:form_registrasi_336823.php"); 
 }
