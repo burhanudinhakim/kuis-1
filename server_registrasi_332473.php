@@ -4,44 +4,39 @@
   $server = new nusoap_server();
   $server->configureWSDL('server','urn:server');
   $server->wsdl->schemaTargetNamespace = 'urn:server';
-  //register a function that works on server 
-  $server->register('simpan', 
+  $server->register('registrasi_ws', 
     array(
-      'username' => 'xsd:string', 
-      'password'=>'xsd:string'), //parameters 
-      array(
-        'return' => 'xsd: string'
-      ), //output 
-      'urn:server', //namespace 
-      'urn:server#loginServer', //soapaction
-      'rpc', // style 
-      'encoded', // use 
-      'login'
-    ); //description
+      'email'         =>  'xsd:string', 
+      'nama'          =>  'xsd:string',
+      'nim'           =>  'xsd:string',
+      'jenis_kelamin' =>  'xsd:string',
+      'alamat'        =>  'xsd:string'
+    ), 
+    array(
+      'return' => 'xsd: string'
+    ), 
+      'urn:server', 
+      'urn:server#registrasiServer', 
+      'rpc', 
+      'encoded', 
+      'registrasi'
+    ); 
       
-    //create function
-    function login_ws($username, $password) { //enkripsi password dengan md5 $password = md5($password);
-      //buat koneksi
+    function registrasi_ws($email, $nama, $nim, $jenis_kelamin, $alamat) {
       $db = NewADOConnection('mysql');
-      $password = md5($password);
-      $db -> Connect('128.199.182.167','kuis1','rahasia','kuis1'); //cek username dan password dari database
-      $sql = $db -> Execute("SELECT * FROM user where username='$username' AND password='$password'");
-      //Cek adanya username dan password di database
-      if ($sql->RecordCount() >= 1) //sama dengan mysql_num_rows pada php biasa
+      $db->Connect('128.199.182.167','kuis1','rahasia','kuis1'); 
+      
+      $sql = $db->Execute("SELECT * FROM pengguna where email='$email'");
+      $sql2 = $db->Execute("SELECT * FROM pengguna where nim='$nim'");
+      if ($sql->RecordCount() >= 1 || $sql2->RecordCount() >= 1)
       {
-        return "Login Berhasil";
+        return "Registrasi Gagal; Email atau nim pengguna sudah terdaftar;";
       } else {
-        return "Login gagal";
+        $sql3 = $db->Execute("insert into pengguna (email, nim, nama, jenis_kelamin, alamat) value ('$email', '$nim', '$nama', '$jenis_kelamin', '$alamat')");
+        if ($sql3) {
+          return "Registrasi Berhasil";
+        }
       } 
     }
-	
-	  function simpan($username, $password) { //enkripsi password dengan md5 $password = md5($password);
-      //buat koneksi
-      $db = NewADOConnection('mysql');
-      $password = md5($password);
-      $db -> Connect('128.199.182.167','kuis1','rahasia','kuis1'); //cek username dan password dari database
-      $sql = $db -> Execute("INSERT into pengguna values('$email','$nim','$nama','$jenis_kelamin','$alamat')");
-	
-    //create HTTP listener
     $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : ''; $server->service($HTTP_RAW_POST_DATA);
 ?>
