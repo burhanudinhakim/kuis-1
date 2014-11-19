@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_error',1);
 session_start();
 require_once('nusoap/lib/nusoap.php');
-$url = 'http://localhost/dev/kuis-1/server_registrasi_jawaban.php?wsdl';
+$url = 'http://localhost/dev/kuis-1/server_registrasi_328243.php?wsdl';
 $client = new nusoap_client($url, 'WSDL');
 $p_post = $_POST;
 $result = $client->call('registrasi_ws', 
@@ -16,8 +16,8 @@ $result = $client->call('registrasi_ws',
 );
 if($result == "Registrasi Berhasil"){ 
   $_SESSION['email'] = $p_post['email']; 
-  header ("location:index_registrasi_berhasil.php");
+  header ("location:index_registrasi_328243.php");
 } else{
-  header ("location:form_registrasi_jawaban.php"); 
+  header ("location:form_registrasi_328243.php"); 
 }
 ?>
