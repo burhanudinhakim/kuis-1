@@ -1,9 +1,7 @@
 <?php
   error_reporting(E_ALL);
   ini_set('display_error',1);
-  //memulai session
   session_start();
-  //cek adanya session
   if(ISSET($_SESSION['email'])){
     //jika tidak ada session 
   } else
@@ -30,8 +28,6 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
           </ul>
         </div><!--/.nav-collapse -->
       </div>
