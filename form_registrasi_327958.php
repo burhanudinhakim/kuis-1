@@ -30,7 +30,7 @@
       
 
       <div>
-        <form class="form-horizontal" action="client_registrasi_257932.php" method="POST">
+        <form class="form-horizontal" action="client_registrasi_327958.php" method="POST">
         <fieldset>
 
         <!-- Form Name -->
