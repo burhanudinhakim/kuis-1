@@ -5,7 +5,7 @@
   if(ISSET($_SESSION['email'])){
     //jika tidak ada session 
   } else
-  header("location:form_registrasi_257932.php");
+  header("location:form_registrasi_327958.php");
 ?>
   <link href="asset/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="asset/css/navbar-fixed-top.css" rel="stylesheet" type="text/css">
