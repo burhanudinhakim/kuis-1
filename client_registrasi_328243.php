@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_error',1);
 session_start();
 require_once('nusoap/lib/nusoap.php');
-$url = 'http://localhost/dev/kuis-1/server_registrasi_328243.php?wsdl';
+$url = 'http://localhost/kuis-1/server_registrasi_328243.php?wsdl';
 $client = new nusoap_client($url, 'WSDL');
 $p_post = $_POST;
 $result = $client->call('registrasi_ws', 
