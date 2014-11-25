@@ -33,7 +33,7 @@
         <form class="form-horizontal" action="client_registrasi_332473.php" method="POST">
         <fieldset>
 
-        <!-- Form Name -->
+        <!-- form nama-->
         <legend>Registrasi Pengguna</legend>
 
         <!-- Text input-->
