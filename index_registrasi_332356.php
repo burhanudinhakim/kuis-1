@@ -1,9 +1,7 @@
 <?php
   error_reporting(E_ALL);
   ini_set('display_error',1);
-  //memulai session
   session_start();
-  //cek adanya session
   if(ISSET($_SESSION['email'])){
     //jika tidak ada session 
   } else
@@ -31,7 +29,6 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
           </ul>
-          
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -40,7 +37,7 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h3>Selamat Datang di ELISA Universitas Gadjah Mada</h3>
+        <h3>Registrasi Pengguna Berhasil</h3>
         <p>Mari berbagi pengetahuan, berkolaborasi dan menjadi produktif dalam kerangka pembelajaran.</p>
         <p>
           <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Selengkapnya &raquo;</a>
