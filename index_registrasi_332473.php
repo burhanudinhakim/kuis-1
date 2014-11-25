@@ -1,7 +1,7 @@
 <?php
   error_reporting(E_ALL);
   ini_set('display_error',1);
-  session_start(); //melihat session ada atau tidak
+  session_start(); 
   if(ISSET($_SESSION['email'])){
     //jika tidak ada session 
   } else

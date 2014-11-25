@@ -8,15 +8,15 @@ $client = new nusoap_client($url, 'WSDL');
 $p_post = $_POST;
 $result = $client->call('register_ws', 
   array(
-  'email'         =>  $p_post['email'], 
-  'nama'          =>  $p_post['nama'], 
-  'nim'           =>  $p_post['nim'], 
-  'jenis_kelamin' =>  $p_post['jenis_kelamin'], 
-  'alamat'		  =>  $p_post['alamat'],
+    'email'         =>  $p_post['email'], 
+    'nama'          =>  $p_post['nama'],
+    'nim'           =>  $p_post['nim'],
+    'jenis_kelamin' =>  $p_post['jenis_kelamin'],
+    'alamat'        =>  $p_post['alamat'],
   )
 );
 if($result == "Registrasi Berhasil"){ 
-  $_SESSION['email'] = $p_post['email']; 
+  $_SESSION['email'] = $p_post['email'];
   header ("location:index_registrasi_332473.php");
 } else{
   header ("location:form_registrasi_332473.php"); 
