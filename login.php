@@ -4,7 +4,7 @@
   session_start();
   //cek adanya session, jika session sudah ada maka diarahkan ke index.php 
   if (ISSET($_SESSION['username'])){
-    header("location:index.php"); 
+    header("location:registrasi.php"); 
   }
 ?>
 <form method="post" action="client.php">
