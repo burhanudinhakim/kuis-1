@@ -11,11 +11,11 @@ $client = new nusoap_client($url, 'WSDL');
 
 $username =  isset($_POST["username"]) ? $_POST["username"] : 'admin' ;
 $password =  isset($_POST["password"]) ? $_POST["password"] :  'admin' ;
-$result = $client->call('login_ws', array('username'=>$username, 'password'=>$password));
+$result = $client->call('daftar', array('username'=>$username, 'password'=>$password));
 // echo '<pre>';print_r($client->response);echo '</pre>';
 if($result == "Login Berhasil"){ 
   $_SESSION['username'] = $username; 
-  header ("location:index.php");
+  header ("location:register.php");
 } else{
   header ("location:login.php"); 
 }
