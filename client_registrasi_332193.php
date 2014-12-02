@@ -2,25 +2,25 @@
 error_reporting(E_ALL);
 ini_set('display_error',1);
 session_start();
-//panggil library
 require_once('nusoap/lib/nusoap.php');
-//mendefinisikan alamat url service yang disediakan oleh client 
-$url = 'http://localhost/dev/ws/wsdl/server.php?wsdl';
-// $client = new soapclient($url); 
+
+$url = 'http://localhost/kuis-1/server_registrasi_332193.php?wsdl';
 $client = new nusoap_client($url, 'WSDL');
+$p_post = $_POST;
 
-$email =  isset($_POST["email"]) ? $_POST["email"];
-$nim =  isset($_POST["nim"]) ? $_POST["nim"];
-$nama =  isset($_POST["nama"]) ? $_POST["nama"];
-$jenis_kelamin =  isset($_POST["jenis_kelamin"]) ? $_POST["jenis_kelamin"] ;
-$alamat =  isset($_POST["alamat"]) ? $_POST["alamat"];
+$result = $client->call('registrasi_ws', 
+  array(
+  'email'         =>  $p_post['email'], 
+  'nama'          =>  $p_post['nama'], 
+  'nim'           =>  $p_post['nim'], 
+  'jenis_kelamin' =>  $p_post['jenis_kelamin'], 
+  )
+);
 
-$result = $client->call('login_ws', array('username'=>$username, 'password'=>$password));
-// echo '<pre>';print_r($client->response);echo '</pre>';
-if($result == "Login Berhasil"){ 
-  $_SESSION['username'] = $username; 
-  header ("location:index.php");
+if($result == "Registrasi Berhasil"){ 
+  $_SESSION['email'] = $p_post['email']; 
+  header ("location:index_registrasi_332193.php");
 } else{
-  header ("location:login.php"); 
+  header ("location:form_registrasi_332193.php"); 
 }
 ?>
