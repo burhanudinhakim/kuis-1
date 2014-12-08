@@ -48,23 +48,17 @@
 	$data = array('email'=>$this->input->post('email'),
 				  'nim'=>$this->input->post('nim'),
 				  'nama'=>$this->input->post('nama'),
-				  'nim'=>$this->input->post('nim'),
 				  'jenis_kelamin'=>$this->input->post('jenis_kelamin'),
 				  'alamat'=>$this->input->post('alamat')
 				
 				  );
 	
 	if($result == 1)     { 
-	echo ‘ERROR! The username you have chosen already exists!’;     
+	echo "ERROR! The username you have chosen already exists!";     
 	} else     {     
 	mysql_query("INSERT INTO TABLENAME (username, password, firstname, lastname, age, ip) 
 	VALUES ('$username', '$password', '$firstname', '$lastname', '$age', '$ip')");    
-	echo '   
- <p> Congratulations! You have successfully registered! Click here to login.‘; </p>
-
+	echo "<p> Congratulations! You have successfully registered! Click here to login.</p>";
 }
-
-	
-	
-	
+}
 ?>

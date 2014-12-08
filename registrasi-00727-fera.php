@@ -26,19 +26,30 @@
 			<tr>
 				<td>Nama</td>
 				<td>:</td>
-				<td><input type=password name='nama' size=30></td>
+				<td><input type=text name='nim' size=30></td>
 			</tr>
 			<tr>
 				<td>Jenis Kelamin</td>
 				<td>:</td>
 				<td>
-					<select name='jenis_kelamin' style='width:300px;'>
+					<!-- <select name='jenis_kelamin' style='width:300px;'>
 						<option value=''>--  Pilih  --</option>
 						<?php
 						
 						?>
-					</select>
+					</select> -->
+					
+						<input type="radio" name="JK" value="Pria" />Wanita<br />
+						<input type="radio" name="JK" value="Wanita" />Pria
+							
+					
 				</td>
+			</tr>
+
+			<tr>
+				<td>Alamat</td>
+				<td>:</td>
+				<td><input type=password name='alamat' size=30></td>
 			</tr>
 			
 			<tr>
